@@ -92,6 +92,9 @@
 					  		<td colspan="9" ng-if="registros == 0">Nenhum registro localizado</td>
 					  	</tr>
 				  	</tbody>
+				  	<thead>
+				  		<tr><th colspan="9"><div class="fb-like" href="https://www.facebook.com/trabsd/"></div></th></tr>
+				  	</thead>
 				</table> 
 
 
@@ -136,6 +139,23 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
                     <button ng-click="excluir()" class="btn btn-danger btn-ok">Excluir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="mensagem" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Confirme</h4>
+                </div>
+                <div class="modal-body">
+                	<div id='mensagem_corpo'></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">OK</button>
                 </div>
             </div>
         </div>
@@ -223,6 +243,16 @@
 
 	  </div>
 	</div>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
 
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
